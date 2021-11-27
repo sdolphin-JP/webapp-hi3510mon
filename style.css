@@ -1,0 +1,349 @@
+/**
+ * @file        style.css
+ * @brief       Style sheet for web user interface
+ *
+ * @author      (C) 2011-2021 sdolphin (https://www.sdolphin.jp/)
+ * @date        2021/10/01
+ * @note        Nothing special.
+ * @attention   Nothing special.
+ */
+
+/*
+ * The margin between left and right object is 32px.
+ * (Attach 16px margin to left and right.)
+ * The margin between top and bottom object is 32px.
+ * (Attach 16px margin to bottom.)
+ *
+ * It seems that multiples of 8 are good, so try to stick to it as much as possible.
+ */
+
+/******************************************************************************
+ * Default
+ ******************************************************************************/
+
+html {
+
+    /* Not inheritable */
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+body {
+
+    /* Not inheritable */
+    background: #072b5b;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0px;
+    min-width: 320px;
+    overflow: visible;
+    padding: 0px;
+    width: 100%;
+    user-select: none;
+
+    /* Inheritable */
+    color: black;
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Meiryo", "メイリオ", sans-serif;
+    font-size: medium;
+    line-height: 1.4;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+/******************************************************************************
+ * Contents
+ ******************************************************************************/
+
+main {
+
+    /* Not inheritable */
+    color: #ddddff;
+    background: rgba(23, 24, 80, 0.8);
+    border: 8px solid #ddddff;
+    border-radius: 8px;
+    border-top: 40px solid #ddddff;
+    box-sizing: border-box;
+    display: block;
+    margin: 16px;
+    padding: 8px;
+    user-select: none;
+
+    /* Inheritable */
+    text-align: left;
+}
+
+.i_TitleText {
+
+    /* Not inheritable */
+    margin: 0px;
+    margin-bottom: 16px;
+    user-select: none;
+
+    /* Inheritable */
+    font-style: oblique;
+}
+
+
+/******************************************************************************
+ * For monitor.
+ ******************************************************************************/
+
+.b_monitor {
+
+    /* Not inheritable */
+    background: rgba(0 ,0 ,0 ,0.8);
+    border: 4px solid #ddddff;
+    border-radius: 8px;
+    margin: 0px auto;
+    max-height: 720px;
+    user-select: none;
+
+    /* Inheritable */
+    text-align: center;
+}
+
+.i_monitor_image {
+
+    /* Not inheritable */
+    display: block;
+    margin: auto;
+    max-height: 720px;
+    max-width: 1280px;
+    object-fit: contain;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+
+/******************************************************************************
+ * For control.
+ ******************************************************************************/
+
+.b_control {
+
+    /* Not inheritable */
+    border: 4px solid #ddddff;
+    border-radius: 8px;
+    margin: 8px auto;
+    padding: 8px 32px;
+    user-select: none;
+
+    /* Inheritable */
+    font-size: x-large;
+    text-align: center;
+}
+
+.b_control_items {
+
+    /* Not inheritable */
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0px auto;
+    padding: 0px;
+    user-select: none;
+}
+
+.i_control_item {
+
+    /* Not inheritable */
+    border: 4px solid #ddddff;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 16px;
+    user-select: none;
+}
+
+.i_control_item_label {
+
+    /* Not inheritable */
+    border-bottom: 2px solid #ddddff;
+    padding-bottom: 2px;
+}
+
+.b_control_item_button {
+
+    /* Not inheritable */
+    align-self: center;
+    border: 4px solid #ddddff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 8px;
+    padding: 16px;
+    user-select: none;
+}
+
+.b_control_item_button:active,
+.b_control_item_button_selected {
+
+    /* Not inheritable */
+    background: #ddddff;
+
+    /* Inheritable */
+    color: #171850;
+}
+
+.b_control_item_button_disable {
+
+    /* Not inheritable */
+    border: 4px solid #8888aa;
+
+    /* Inheritable */
+    color: #8888aa
+}
+
+@media screen and (max-width: 1280px) {
+
+    .b_control {
+
+        /* Not inheritable */
+        margin: 4px auto;
+        padding: 4px 26px;
+
+        /* Inheritable */
+        font-size: small;
+    }
+
+    .i_control_item {
+
+        /* Not inheritable */
+        margin: 4px;
+        padding: 8px;
+    }
+
+    .b_control_item_button {
+
+        /* Not inheritable */
+        margin: 4px;
+        padding: 8px;
+    }
+}
+
+
+/******************************************************************************
+ * For dialog.
+ ******************************************************************************/
+
+.b_mask_all {
+
+    /* Not inheritable */
+    background: black;
+    height: 100%;
+    left: 0px;
+    opacity: 0.7;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    user-select: none;
+}
+
+.b_dialog {
+
+    /* Not inheritable */
+    background: rgba(23, 24, 80, 0.9);
+    border: 8px solid #ddddff;
+    border-radius: 8px;
+    border-top: 40px solid #ddddff;
+    left: 50%;
+    margin: auto;
+    padding: 32px 16px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    user-select: none;
+
+    /* Inheritable */
+    text-align: center;
+}
+
+.i_dialog_text {
+
+    /* Not inheritable */
+    align-self: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0px 0px 32px 0px;
+    padding: 0px;
+    user-select: none;
+
+    /* Inheritable */
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.i_dialog_text-warning {
+
+    /* Inheritable */
+    color: red;
+}
+
+.i_dialog_text-confirm {
+
+    /* Inheritable */
+    color: orange;
+}
+
+.b_dialog_button {
+
+    /* Not inheritable */
+    align-self: center;
+    border: 4px solid #ddddff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 8px;
+    padding: 16px;
+    user-select: none;
+
+    max-width: 40%;
+    min-width: 15%;
+}
+
+.b_dialog_button:active,
+.b_dialog_button_selected {
+
+    /* Not inheritable */
+    background: #ddddff;
+    color: #171850;
+}
+
+.b_dialog_progress_outer {
+
+    /* Not inheritable */
+    border: 4px solid #ddddff;
+    height: 64px;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+
+.b_dialog_progress_inner {
+
+    /* Not inheritable */
+    animation: k_dialog_progress 56s linear 0s 1 forwards;
+    animation-play-state: running;
+    background: red;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 0%;
+    user-select: none;
+}
+
+@keyframes k_dialog_progress {
+
+    0%   { background: red;    width: 0%; }
+    50%  { background: yellow; width: 50%; }
+    100% { background: green;  width: 100%; }
+}

@@ -1,0 +1,92 @@
+<!--
+/**
+ * @file        index.html
+ * @brief       Web user interface
+ *
+ * @author      (C) 2011-2021 sdolphin (https://www.sdolphin.jp/)
+ * @date        2021/10/01
+ * @note        Nothing special.
+ * @attention   Nothing special.
+ */
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,maximum-scale=1.0">
+        <link rel="author"     href="(C) 2011-2021 sdolphin">
+        <link rel="icon"       href="favicon.ico">
+        <link rel="stylesheet" href="style.css" rel="preload">
+        <title>HI3510 Monitor</title>
+        <meta name="description" content="HI3510 Monitor">
+    </head>
+    <body>
+        <main>
+            <h1 class="i_TitleText">⊇ HI3510 Monitor</h1>
+            <!-- Monitor -->
+            <div id="id_monitor_area" class="b_monitor">
+                <img id="id_snapshot" class="i_monitor_image" src="default.png">
+            </div>
+            <!-- Control -->
+            <div id="id_control_area" class="b_control">
+                <ul class="b_control_items">
+                    <li id="id_control_ptz" class="i_control_item">
+                        <span class="i_control_item_label">パン・チルト操作</span><br><br>
+                        <div class="b_control_item_button" onMouseDown="ptzCtrl('left')"  onMouseUp="ptzCtrl('stop')">◀</div>
+                        <div class="b_control_item_button" onMouseDown="ptzCtrl('up')"    onMouseUp="ptzCtrl('stop')">▲</div>
+                        <div class="b_control_item_button" onMouseDown="ptzCtrl('down')"  onMouseUp="ptzCtrl('stop')">▼</div>
+                        <div class="b_control_item_button" onMouseDown="ptzCtrl('right')" onMouseUp="ptzCtrl('stop')">▶</div>
+                        <br>
+                        <!--
+                        <div class="b_control_item_button" onMouseDown="ptzCtrl('zoomin')"  onMouseUp="ptzCtrl('stop')">＋</div>
+                        <div class="b_control_item_button" onMouseDown="ptzCtrl('zoomout')" onMouseUp="ptzCtrl('stop')">−</div>
+                        <div class="b_control_item_button" onMouseDown="ptzCtrl('home')" onMouseUp="ptzCtrl('stop')">初期位置</div>
+                        <br>
+                        -->
+                        <div class="b_control_item_button" onclick="ptzCtrl('vscan')">上下移動</div>
+                        <div class="b_control_item_button" onclick="ptzCtrl('hscan')">左右移動</div>
+                        <div class="b_control_item_button" onclick="ptzCtrl('stop')">移動停止</div>
+                    </li>
+                    <li id="id_control_preset" class="i_control_item">
+                        <span class="i_control_item_label">プリセット操作</span><br><br>
+                        <div id="id_pre1" class="b_control_item_button" onclick="selectPreset('1')">1</div>
+                        <div id="id_pre2" class="b_control_item_button" onclick="selectPreset('2')">2</div>
+                        <div id="id_pre3" class="b_control_item_button" onclick="selectPreset('3')">3</div>
+                        <div id="id_pre4" class="b_control_item_button" onclick="selectPreset('4')">4</div>
+                        <br>
+                        <div id="id_pre5" class="b_control_item_button" onclick="selectPreset('5')">5</div>
+                        <div id="id_pre6" class="b_control_item_button" onclick="selectPreset('6')">6</div>
+                        <div id="id_pre7" class="b_control_item_button" onclick="selectPreset('7')">7</div>
+                        <div id="id_pre8" class="b_control_item_button" onclick="selectPreset('8')">8</div>
+                        <br>
+                        <div class="b_control_item_button" onclick="setPreset()">設定</div>
+                        <div class="b_control_item_button" onclick="unsetPreset()">削除</div>
+                        <div class="b_control_item_button" onclick="doPreset()">実行</div>
+                    </li>
+                    <li id="id_control_attr" class="i_control_item">
+                        <span class="i_control_item_label">カメラ設定</span><br><br>
+                        <div id="id_mirror" class="b_control_item_button" onclick="setCameraAttr_mirror()">左右反転</div>
+                        <div id="id_flip" class="b_control_item_button" onclick="setCameraAttr_flip()">上下反転</div>
+                    </li>
+                    <li id="id_control_redled" class="i_control_item">
+                        <span class="i_control_item_label">赤外線設定</span><br><br>
+                        <div id="id_redled_auto" class="b_control_item_button" onclick="setRedLed('auto')">自動</div><br>
+                        <div id="id_redled_open" class="b_control_item_button" onclick="setRedLed('open')">有効</div><br>
+                        <div id="id_redled_close" class="b_control_item_button" onclick="setRedLed('close')">無効</div><br>
+                    </li>
+                    <li id="id_control_system" class="i_control_item">
+                        <span class="i_control_item_label">システム操作</span><br><br>
+                        <div class="b_control_item_button" onclick="sysReboot()">再起動</div><br>
+                        <div class="b_control_item_button" onclick="showRecord()">記録データ</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Dialog -->
+            <div id="id_dialog_area"></div>
+        </main>
+        <!-- Script -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="function.js"></script>
+    </body>
+</html>

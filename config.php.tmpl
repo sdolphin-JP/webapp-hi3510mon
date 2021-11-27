@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file        config.php.tmpl
+ * @brief       The configuration for hi3510api.php
+ *
+ * @author      (C) 2011-2021 sdolphin (https://www.sdolphin.jp/)
+ * @date        2021/10/01
+ * @note        Nothing special.
+ * @attention   Nothing special.
+ */
+
+// If you want to research bug, change 0 to 1.
+ini_set('display_errors', 0);
+
+// Please change item for your environment.
+$_CONF['host'] = 'http://ipcam.example.jp';
+$_CONF['user'] = 'admin';
+$_CONF['pass'] = 'ipcam';
+
+// Do not edit.
+$_CONF['auth'] = base64_encode("${_CONF['user']}:${_CONF['pass']}");
+
+?>
