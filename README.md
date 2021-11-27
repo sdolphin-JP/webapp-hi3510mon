@@ -4,7 +4,7 @@
  - Easy control is also possible.
  - But not support voice and I'm not sure how to do it.
 
-![demo](docs/demo.PNG)
+![demo](.github/docs/demo.PNG)
 
 <br />
 

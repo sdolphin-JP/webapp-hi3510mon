@@ -1,8 +1,8 @@
 # BEGIN HI3510MON
-<Files ~ "^(README.md|LICENSE)$">
+<Files ~ "^(README.md|LICENSE|.gitignore)$">
   require all denied
 </Files>
 <Files ~ "^(config.php|config.php.tmpl)$">
   require all denied
 </Files>
-# END HI3510MON
+# END   HI3510MON
