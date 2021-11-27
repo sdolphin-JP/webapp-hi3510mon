@@ -508,7 +508,7 @@ function watchRebootTimer()
  */
 function showRecord()
 {
-    window.open("../ipcam1-rec/files/captured?C=N;O=D");
+    window.open("../ipcam1-rec/captured?C=N;O=D");
 }
 
 /**
