@@ -35,12 +35,20 @@ if (isset($_GET['cmd']))
             $addUrl = 'cgi-bin/hi3510/sysreboot.cgi';
             $addArg = '';
             break;
-        case 'jpgl':
+        case 'jpgl1':
+            $addUrl  = 'tmpfs/auto.jpg';
+            $addArg  = '';
+            break;
+        case 'jpgh1':
+            $addUrl  = 'tmpfs/snap.jpg';
+            $addArg  = '';
+            break;
+        case 'jpgl2':
             $addUrl  = 'tmpfs/auto.jpg';
             $addArg  = '';
             $isBse64 = true;
             break;
-        case 'jpgh':
+        case 'jpgh2':
             $addUrl  = 'tmpfs/snap.jpg';
             $addArg  = '';
             $isBse64 = true;

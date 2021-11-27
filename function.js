@@ -226,10 +226,18 @@ function updateSnapshot(a_period)
     {
         if (!g_isSimlation)
         {
-            $.ajax({ url: createApiURL('jpgl', ''), type: 'get', dataType:'text' })
+            setTimeout(() => {
+                document.getElementById('id_snapshot').onload  = function() { updateSnapshot(800) };
+                document.getElementById('id_snapshot').onerror = function() { updateSnapshot(800) };
+                document.getElementById('id_snapshot').src     = createApiURL('jpgl1', Math.random());
+            }, a_period);
+
+            /*
+            $.ajax({ url: createApiURL('jpgl2', ''), type: 'get', dataType:'text' })
             .done(function(respData) { document.getElementById('id_snapshot').src = `data:image/jpg;base64,${respData}`; })
             .fail(function() {})
             .always(function() { setTimeout(function() { updateSnapshot(a_period); }, a_period); });
+            */
         }
     }
 }
